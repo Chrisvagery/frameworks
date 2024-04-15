@@ -33,7 +33,5 @@ Neste exemplo, vamos criar um simples sistema de votação utilizando Express.js
    Certifique-se de ter o Node.js instalado no seu sistema. Inicie um novo projeto Node.js e instale as dependências necessárias:
 
    ```bash
-   mkdir sistema-votacao
-   cd sistema-votacao
-   npm init -y
+   
    npm install express socket.io
