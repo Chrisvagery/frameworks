@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação em Tempo Real</title>
+    <script src="https://cdn.socket.io/socket.io-3.0.4.min.js"></script>
+    <script>
+      const socket = io();
+
+      // Função para enviar o voto ao servidor
+      function vote(option) {
+        socket.emit('vote', option);
+      }
+
+      // Atualiza a contagem de votos na página
+      function updateVotes(votes) {
+        document.getElementById('option1').innerText = votes.option1;
+        document.getElementById('option2').innerText = votes.option2;
+        document.getElementById('option3').innerText = votes.option3;
+      }
+
+      // Recebe a contagem de votos atualizada do servidor
+      socket.on('updateVotes', updateVotes);
+    </script>
+  </head>
+
+  <body>
+    <h1>Enquete</h1>
+    <button onclick="vote('option1')">Opção 1</button>
+    <button onclick="vote('option2')">Opção 2</button>
+    <button onclick="vote('option3')">Opção 3</button>
+    <div>
+      <p>Opção 1: <span id="option1">0</span></p>
+      <p>Opção 2: <span id="option2">0</span></p>
+      <p>Opção 3: <span id="option3">0</span></p>
+    </div>
+  </body>
+
+</html>
