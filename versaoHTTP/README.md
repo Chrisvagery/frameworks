@@ -2,10 +2,10 @@
 
 ## 1-	Quais são as principais diferenças entre o HTTP/1.1 e o HTTP/2?
 
-•	HTTP/1.1 precisa criar uma nova requisição para cada recurso.
-•	HTTP/2 pode enviar todos os recursos em uma única conexão, usando compressão de cabeçalhos.
-•	HTTP/1 usa gzip. É utilizado para compressão do corpo da mensagem em respostas HTTP.
-•	HTTP/2 usa HPACK. É utilizado para compressão de cabeçalhos HTTP.
+- **HTTP/1.1** precisa criar uma nova requisição para cada recurso.
+- **HTTP/2** pode enviar todos os recursos em uma única conexão, usando compressão de cabeçalhos.
+- **HTTP/1 usa gzip.** É utilizado para compressão do corpo da mensagem em respostas HTTP.
+- **HTTP/2 usa HPACK.** É utilizado para compressão de cabeçalhos HTTP.
 
 As principais diferenças entre HTTP/1.1 e HTTP/2 incluem várias melhorias no desempenho e na eficiência. Uma das diferenças mais significativas é a multiplexação, que permite a realização de várias solicitações simultâneas em uma única conexão TCP, reduzindo a latência em comparação com o HTTP/1.1. A compressão de cabeçalhos é outro aspecto importante, pois economiza largura de banda ao compactar os dados dos cabeçalhos. A priorização de recursos é uma funcionalidade que possibilita ao cliente informar ao servidor quais solicitações devem ser tratadas com mais urgência, otimizando o carregamento da página. O Server Push, um recurso exclusivo do HTTP/2, permite ao servidor enviar recursos ao cliente antes mesmo de serem solicitados, antecipando suas necessidades. Além disso, o uso de formato binário para comunicação, em vez do texto legível utilizado no HTTP/1.1, torna a troca de dados mais eficiente. Esses aprimoramentos tornam o HTTP/2 mais rápido e eficaz para o uso na web.
 
